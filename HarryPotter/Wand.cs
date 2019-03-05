@@ -7,8 +7,7 @@ using Newtonsoft.Json;
 
 namespace HarryPotter
 {
-    [Serializable]
-    public struct Wand
+    public class Wand
     {
         [JsonProperty("wood")]
         public string Wood { get; set; }

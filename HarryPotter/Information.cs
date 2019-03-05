@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 
 namespace HarryPotter
 {
-    [Serializable]
     public class Information
     {
         [JsonProperty("name")]
@@ -17,7 +16,7 @@ namespace HarryPotter
         public string Species { get; set; }
 
         [JsonProperty("gender")]
-        public string Gender { get; set; }
+        public Gender Gender { get; set; }
 
         [JsonProperty("house")]
         public string House { get; set; }
@@ -57,5 +56,27 @@ namespace HarryPotter
 
         [JsonProperty("image")]
         public string Image { get; set; }
+
+        public void Show()
+        {
+            Console.WriteLine("Name: " + Name +
+                "\nSpecies: " + Species +
+                "\nGender: " + Gender +
+                "\nHouse: " + House +
+                "\nDateOfBirth: " + DateOfBirth +
+                "\nYearOfBirth: " + YearOfBirth +
+                "\nAncestry: " + Ancestry +
+                "\nEyeColour: " + EyeColour +
+                "\nHairColour: " + HairColour +
+                "\nWood: " + Wand.Wood +
+                "\nCore: " + Wand.Core +
+                "\nLength: " + Wand.Length +
+                "\nPatronus: " + Patronus +
+                "\nHogwartsStudent: " + HogwartsStudent +
+                "\nHogwartsStaff: " + HogwartsStaff +
+                "\nActor: " + Actor +
+                "\nAlive: " + Alive +
+                "\nImage: " + Image + "\n\n");
+        }
     }
 }
